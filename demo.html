@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie edge">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var name="vini";
+            function demo1(){
+                var name="vineetha";
+                console.log(name);
+            }
+            demo1();
+            console.log(name);
+            //anonymous function
+            let demo=function(x,y){
+                return x+y;
+            }
+            console.log(demo(3,4));
+        // arrow function
+        let demo2=(x,y)=>{
+            console.log(x+y);
+        }
+        console.log(demo2(3,6));
+        //list 
+        let list=[1,2,3];
+        list.forEach(x=> console.log(x*2));
+        list.map(x=> console.log(x*3));
+        //objects
+        let employee={
+            nam:"vinnu",
+            age:20,
+            designation:"je",
+        }
+        console.log(employee);
+        let des=employee.designation;
+        console.log(des);
+        //destruction of object
+        let {nam,age,designation}=employee;
+        console.log(nam);
+        console.log(age);
+        console.log(designation);
+
+        let a=7,b=8;
+        [b,a]=[a,b];
+        console.log(a);
+        console.log(b);
+        //destructing of arrays
+        let employees=["vini","anu","asha"]
+        //spreed operator
+        let [first,...remainList]=employees;
+        console.log(first);
+        console.log(remainList);
+        //rest parameter
+        function addition(x,y,...remainData){
+            console.log(x);
+            console.log(y);
+            console.log("add is "+(x+y));
+            console.log(remainData);
+        }
+        addition(22,23,45,56,3,"vini");
+        </script>
+    </body>
+</html>
